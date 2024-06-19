@@ -12,12 +12,7 @@ This pattern is used to validate passwords, and ensures that the password chosen
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
-- [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
@@ -42,20 +37,25 @@ In summary, changing the quantifiers are a way to control the requirements for m
 
 ### Character Classes
 
-### Flags
+As you may have picked up previously, character classes are used to match a set of characters. In our regex for example, `[a-z]` is used to match any lowercase letter inputed, `[A-Z]` is used for matching any uppercase letter, `/d` is used for any digit, and lastly, `[@$!%*?&]` matches any of the specified special characters. 
 
 ### Grouping and Capturing
 
-### Bracket Expressions
+Grouping and capturing are used to group certain parts of the regex pattern together, just as one would see prefixes and/or suffixes in linguistics. In our regex, the parantheses `()` are used for grouping. 
 
-### Greedy and Lazy Match
+  - `(?=.*[a-z])`: ensures that there is at least 1 lowercase letter in the string (from "a" to "z"), and that it doesnt matter where in particular it appears, but it has to be there. 
+  - `(?=.*[A-Z])`: ensures that there is at least 1 uppercase letter in the string (from "A" to "Z"), and that it doesnt matter where in particular it appears, but it has to be there. 
+  - `(?=.*\d)`   : ensures that there is at least 1 number, in the string (from "0" to "9"), and that it doesnt matter where in particular it appears, but it has to be there. 
+  - `(?=.*[@$!%*?&])`: ensures that a special character must be used somewhere in the string. 
 
-### Boundaries
+### Look-ahead Assertions
 
-### Back-references
+Look-ahead assertions are a way to ensure that a certain pattern can be matched ahead in the string, without consuming characters. What does that mean?  Lets take an example from our previous section, `(?=.*[a-z])`, where the `?=` is a positive look-ahead, and checks that something is true ahead in the string, without actually moving the pointer in the string. Simply put, it makes sure that whatever is held within the `()`, in this case, the requirements for a lowercase letter, denoted by `[a-z]` can be found later in the string. For example, if an inputed password was as follows, `PASSWORD123!`, our look-ahead `(?=.*[a-z])` would determine that there is no lowercase letter included, so that password would not match the requirements. Similary, there are "look-behinds" assertions, which analyze whether or not the subpattern happens before the the asserting position (grouping), however, in this case, it is not utilized. 
 
-### Look-ahead and Look-behind
+### Wrapping it Up
+
+Now that we have discussed this regex pattern for password validation, I hope that you have gained a basic understanding and just how powerful, if done right, this seemingly random assortment of characters you find on your keyboard can be! It is easier to understand once you divide and conquer, breaking down each part individually. This is not a one-size-fits-all expression, but being able to take this discussion and use it to better understand whatever regex pattern you might use for your own application is exactly where the fun begins! Best of luck, and thank you for joining me today. 
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+
