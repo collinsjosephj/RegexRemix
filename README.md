@@ -1,4 +1,4 @@
-# Title: Anything but Regular, a Discussion about Password Strengh Validation & Regex
+# Title: Anything but Regular, a Discussion about Password Strengh Validation & Regex [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 I would like to welcome you to this tutorial on regex, a inherantly powerful tool utilized by developers worldwide for pattern matching and text manipulation. Regex (short for Regular Expressions) can seem intimidating at first, however, it is a essential tool once one becomes proficient in the world of web development/full stack coding applications. In this tutorial, we will discuss a regex pattern used for ensuring that passwords are both strong and secure, thus keeping user profiles and sensative information secure on the internet. 
 
@@ -58,4 +58,4 @@ Now that we have discussed this regex pattern for password validation, I hope th
 
 ## Author
 
-
+This tutorial was done by Joseph Collins, and more about me can be found on my GitHub profile [(https://github.com/collinsjosephj)], please reach out! I would love to hear from you and potentially collaborate on a project together. 
